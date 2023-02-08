@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Sarancha_Lesson1</string>
+    <string name="app_name">Sarancha_Lesson</string>
+    <string name="tvName">Name</string>
+    <string name="tvAge">Age</string>
+    <string name="tvEmail">Email</string>
+    <string name="btnShowRandomUser">Show random user</string>
+    <string name="btnMakeDesign">Make random design</string>
 </resources>
