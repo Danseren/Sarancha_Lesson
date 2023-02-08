@@ -1,5 +1,6 @@
 package ru.aston.sarancha_lesson1
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -44,8 +45,24 @@ class UserFragment : Fragment() {
                 tvUserAge.text = "Age: ${userList[randomNumber].age}"
                 tvUserEmail.text = "Email: ${userList[randomNumber].email}"
             }
+
+            btnMakeDesign.setOnClickListener {
+                tvUserName.apply {
+                    val randomStyle = (4..8).random()
+                    textSize = (randomStyle * 4).toFloat()
+                    setPadding(5, 25 * randomStyle, 5, 25 * randomStyle)
+                    when (randomStyle) {
+                        4 -> {setTextColor(Color.BLACK)}
+                        5 -> {setTextColor(Color.RED)}
+                        6 -> {setTextColor(Color.GREEN)}
+                        7 -> {setTextColor(Color.BLUE)}
+                        8 -> {setTextColor(Color.YELLOW)}
+                    }
+                }
+            }
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
